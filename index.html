@@ -8,7 +8,48 @@
 <body>
    <h1>Kanban Board</h1>
    <p>Organizza tutte le attività del gruppo</p>
-   <label for="titolo">Titolo</label><br>
-   <input type="text" id="titolo" name="titolo">
+    <form id="formAttivita">
+            <label for="titolo">Titolo</label>
+            <input type="text" id="titolo">
+            <label for="descrizione">Descrizione</label>
+            <input type="text" id="descrizione">
+            <label for="priorita">Priorità</label>
+            <select id="priorita">
+                <option value="Nulla" selected>--</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Bassa">Bassa</option>
+            </select>
+            <label for="assegnatario">Assegnatario</label>
+            <input type="text" id="assegnatario">
+        <button type="submit">Aggiungi attività</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 </html>
