@@ -8,7 +8,8 @@
 <body>
    <h1>Kanban Board</h1>
    <p>Organizza tutte le attività del gruppo</p>
-    <form id="formAttivita">
+
+<form id="formAttivita">
             <label for="titolo">Titolo</label>
             <input type="text" id="titolo">
             <label for="descrizione">Descrizione</label>
@@ -25,31 +26,20 @@
         <button type="submit">Aggiungi attività</button>
     </form>
 
+    <section class="colonna" id="daFare">
+    <h2>Da fare <span class="conteggio">0</span></h2>
+    <section class="lista"></section>
+    </section>
 
+    <section class="colonna" id="inCorso">
+    <h2>In corso <span class="conteggio">0</span></h2>
+    <section class="lista"></section>
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    <section class="colonna" id="completato">
+    <h2>Completato <span class="conteggio">0</span></h2>
+    <section class="lista"></section>
+    </section>
+  
 </body>
 </html>
