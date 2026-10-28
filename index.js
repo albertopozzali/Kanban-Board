@@ -1,22 +1,26 @@
 const formAttivita = document.getElementById("formAttivita")
 const filtroPriorita = document.getElementById("filtroPriorita")
 const errore = document.getElementById("errore")
-const liste = document.getElementsByClassName("lista")
-const conteggi = document.getElementsByClassName("conteggio")
- 
+const listaDaFare = document.getElementById("listaDaFare")
+const listaInCorso = document.getElementById("listaInCorso")
+const listaCompletato = document.getElementById("listaCompletato")
+const contDaFare = document.getElementById("contDaFare")
+const contInCorso = document.getElementById("contInCorso")
+const contCompletato = document.getElementById("contCompletato")
+
 const dati = JSON.parse(localStorage.getItem("kanbanDati")) || []
 
 formAttivita.addEventListener("submit", gestisciSubmit)
 filtroPriorita.addEventListener("change", mostraBoard)
- 
+
 function salva() {
     localStorage.setItem("kanbanDati", JSON.stringify(dati))
 }
 
 function mostraBoard() {
-    for (let i = 0; i < 3; i++) {
-        liste[i].innerHTML = ""
-    }
+    listaDaFare.innerHTML = ""
+    listaInCorso.innerHTML = ""
+    listaCompletato.innerHTML = ""
     let contatori = [0, 0, 0]
     for (let i = 0; i < dati.length; i++) {
         const valori = dati[i]
@@ -25,9 +29,9 @@ function mostraBoard() {
             contatori[valori.stato]++
         }
     }
-    for (let i = 0; i < 3; i++) {
-        conteggi[i].textContent = contatori[i]
-    }
+    contDaFare.textContent = contatori[0]
+    contInCorso.textContent = contatori[1]
+    contCompletato.textContent = contatori[2]
 }
 
 function creaScheda(valori) {
@@ -72,7 +76,13 @@ function creaScheda(valori) {
         salva()
         mostraBoard()
     })
-    liste[valori.stato].appendChild(scheda)
+    if (valori.stato == 0) {
+        listaDaFare.appendChild(scheda)
+    } else if (valori.stato == 1) {
+        listaInCorso.appendChild(scheda)
+    } else {
+        listaCompletato.appendChild(scheda)
+    }
 }
 
 function gestisciSubmit(event) {
@@ -104,3 +114,5 @@ function gestisciSubmit(event) {
     mostraBoard()
     formAttivita.reset()
 }
+
+mostraBoard()
