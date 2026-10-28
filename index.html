@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban Board</title>
     <script src="index.js" defer></script>
+    <style src="style.css"></style>
 </head>
 <body>
    <h1>Kanban Board</h1>
@@ -12,18 +13,18 @@
 
 <form id="formAttivita">
             <label for="titolo">Titolo</label>
-            <input type="text" id="titolo"> <br> <br>
+            <input type="text" id="titolo" required> <br><br>
             <label for="descrizione">Descrizione</label>
-            <input type="text" id="descrizione"> <br> <br>
+            <input type="text" id="descrizione" required> <br><br>
             <label for="priorita">Priorità</label>
-            <select id="priorita">
+            <select id="priorita" required>
                 <option value="Nulla" selected>--</option>
                 <option value="Alta">Alta</option>
                 <option value="Media">Media</option>
                 <option value="Bassa">Bassa</option>
             </select> <br> <br>
             <label for="assegnatario">Assegnatario</label>
-            <input type="text" id="assegnatario"> <br> <br>
+            <input type="text" id="assegnatario" required> <br><br>
         <button type="submit">Aggiungi attività</button>
     </form>
   
