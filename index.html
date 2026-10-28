@@ -12,18 +12,18 @@
 
 <form id="formAttivita">
             <label for="titolo">Titolo</label>
-            <input type="text" id="titolo"> <br> <br>
+            <input type="text" id="titolo">
             <label for="descrizione">Descrizione</label>
-            <input type="text" id="descrizione"> <br> <br>
+            <input type="text" id="descrizione">
             <label for="priorita">Priorità</label>
             <select id="priorita">
                 <option value="Nulla" selected>--</option>
                 <option value="Alta">Alta</option>
                 <option value="Media">Media</option>
                 <option value="Bassa">Bassa</option>
-            </select> <br>  <br>
+            </select>
             <label for="assegnatario">Assegnatario</label>
-            <input type="text" id="assegnatario"> <br>  <br>
+            <input type="text" id="assegnatario">
         <button type="submit">Aggiungi attività</button>
     </form>
   
@@ -38,18 +38,18 @@
         </select>
 
     <section class="colonna" id="daFare">
-    <h2>Da fare <span class="conteggio">0</span></h2>
-    <section class="lista"></section>
+    <h2>Da fare <span id="contDaFare">0</span></h2>
+    <section id="listaDaFare"></section>
     </section>
 
     <section class="colonna" id="inCorso">
-    <h2>In corso <span class="conteggio">0</span></h2>
-    <section class="lista"></section>
+    <h2>In corso <span id="contInCorso">0</span></h2>
+    <section id="listaInCorso"></section>
     </section>
 
     <section class="colonna" id="completato">
-    <h2>Completato <span class="conteggio">0</span></h2>
-    <section class="lista"></section>
+    <h2>Completato <span id="contCompletato">0</span></h2>
+    <section id="listaCompletato"></section>
     </section>
 </body>
 </html>
