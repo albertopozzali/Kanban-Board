@@ -119,6 +119,17 @@ label[for="filtroPriorita"] {
     margin-bottom: 24px;
     background: #ffffff;
 }
+
+label[for="filtroPersona"] {
+    margin-top: 6px;
+}
+ 
+#filtroPersona {
+    display: block;
+    max-width: 240px;
+    margin-bottom: 24px;
+    background: #ffffff;
+}
  
  
 .colonna {
