@@ -101,6 +101,8 @@ function gestisciSubmit(event) {
     if (priorita == "Nulla"){
         errore.textContent = "Inserisci la priorità!"
         return
+    } else {
+        errore.textContent = ""
     }
     const valori = {
         titolo,
