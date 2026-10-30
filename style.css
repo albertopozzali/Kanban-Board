@@ -64,3 +64,99 @@ select {
     border-radius: 8px;
     transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
+
+input:focus,
+select:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+ 
+button {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+ 
+button:hover {
+    background: #1d4ed8;
+}
+ 
+button:active {
+    transform: scale(0.97);
+}
+ 
+form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+ 
+#errore {
+    min-height: 22px;
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #dc2626;
+}
+ 
+ 
+label[for="filtroPriorita"] {
+    margin-top: 6px;
+}
+ 
+#filtroPriorita {
+    display: block;
+    max-width: 240px;
+    margin-bottom: 24px;
+    background: #ffffff;
+}
+ 
+ 
+.colonna {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    min-height: 280px;
+    margin-right: 0.5%;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 14px;
+    border-top: 6px solid #94a3b8;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.1);
+}
+ 
+#daFare     { border-top-color: #ef4444; }
+#inCorso    { border-top-color: #f59e0b; }
+#completato { border-top-color: #22c55e; }
+ 
+.colonna h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+ 
+.colonna h2 span {
+    display: inline-block;
+    min-width: 28px;
+    margin-left: 6px;
+    padding: 2px 9px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    background: #94a3b8;
+    border-radius: 14px;
+}
+ 
+#daFare h2 span     { background: #ef4444; }
+#inCorso h2 span    { background: #f59e0b; }
+#completato h2 span { background: #22c55e; }
+ 
